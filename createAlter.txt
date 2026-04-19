@@ -1,0 +1,44 @@
+CREATE TABLE personal(
+      firstName VARCHAR2(10),
+      lastName VARCHAR2(10),
+      person_ID NUMBER(10),
+      dob DATE,
+      email VARCHAR2(15)
+    ); 
+
+
+ CREATE TABLE education(
+    startYear DATE,
+    endYear DATE,
+    lastName VARCHAR2(10),
+    institution VARCHAR2(10),
+    degree VARCHAR2(10),
+    contact NUMBER(10),
+    person_ID NUMBER(10)
+   );
+
+
+
+ CREATE TABLE address(
+    address_ID NUMBER(10),
+    city VARCHAR2(10),
+    country VARCHAR2(10),
+    contact NUMBER(10),
+    person_ID NUMBER(10),
+    streetName VARCHAR2(10)
+   );
+
+INSERT INTO personal
+    VALUES ('jennie','jen',111, DATE '2004-01-01','jen@gmail.com');
+
+SELECT * FROM personal;
+
+INSERT INTO address
+    VALUES(321,'kathmandu','nepal',76876,321,'b13');
+
+INSERT INTO education
+    VALUES('1-MAR-2020','1-MAR-2023','jen','nami','bachelor',76876,111);
+
+ ALTER TABLE PERSONAL ADD (
+      country VARCHAR2(10)
+    ); yete garyeko xa maile chai
