@@ -1,0 +1,21 @@
+CREATE TYPE employee_type AS OBJECT(
+    name VARCHAR2(10),
+    dept NUMBER(15),
+    salary NUMBER(12));
+    /
+
+CREATE TYPE company_varray_type AS VARRAY(5) OF employee_type;
+/
+
+CREATE TABLE companies(
+    id NUMBER(25),
+    employeEs company_varray_type
+);
+
+INSERT INTO companies VALUES(
+    11,
+    company_varray_type (
+        employee_type ('jen',1878,8326),
+        employee_type('jennie',897,89234)
+    )
+);

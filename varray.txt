@@ -1,0 +1,23 @@
+ CREATE TYPE student_type AS OBJECT(
+    name VARCHAR2(10),
+    course VARCHAR2(15),
+    marks NUMBER(15));
+    /
+
+
+CREATE TYPE student_varray_type AS VARRAY(5) OF student_type;
+    /
+
+
+CREATE TABLE classrooms (
+    students student_varray_type);
+
+
+INSERT INTO classrooms VALUES(
+    student_varray_type(
+    student_type('jen','database',94),
+    student_type('jennie','database',84),
+    student_type('sum','database',98))
+   );
+
+   
