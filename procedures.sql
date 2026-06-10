@@ -1,0 +1,10 @@
+DECLARE
+   vn_number NUMBER := 10;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE(vn_number);
+
+EXCEPTION
+   WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE('Error!');
+END;
+/
